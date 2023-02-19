@@ -1,0 +1,121 @@
+import React from "react";
+import styled from "styled-components";
+import Title from "../components/Title";
+
+const dataSkills = [
+  {
+    img: "fa fa-object-group",
+    title: "Font-end",
+    knowledgeDetail: " HTML, Css, Js, Reactjs, Bootstrap,...",
+  },
+  {
+    img: "fa fa-graduation-cap",
+    title: "Kiến thức khác",
+    knowledgeDetail: "SQL, Oop, java-core, php, github...",
+  },
+];
+
+const knowledge = [
+  [
+    { title: "HTML", learned: "100" },
+    { title: "CSS", learned: "90" },
+    { title: "JS", learned: "90" },
+  ],
+  [
+    { title: "REACTJS", learned: "80" },
+    { title: "ANGULAR", learned: "50" },
+    { title: "JQUERY", learned: "60" },
+  ],
+];
+export default function Skills() {
+  return (
+    <ContainerSkill className="container pt-5">
+      <Title content="Skills" id="skills" />
+      <div>
+        <P className="pb-1">
+          Tôi đã có hơn 1 năm kinh nghiệm trong vị trí Web Developer
+        </P>
+        <div className="row">
+          {dataSkills.map((item, index) => (
+            <div
+              className="col-6 col-md-3 col-lg-3 col-xl-3 detail__skills"
+              key={index}
+            >
+              <div className="skill">
+                <i className={item.img} aria-hidden />
+                <p className="pb-0">
+                  <strong>{item.title}</strong>
+                </p>
+                <p className="knowledge pb-0">{item.knowledgeDetail}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="row">
+        {knowledge.map((knowledges, index) => (
+          <div
+            key={index}
+            className="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6"
+          >
+            {knowledges.map((item, index) => (
+              <div key={`_${index}`}>
+                <p className="language">
+                  <strong>{item.title}</strong>
+                </p>
+                <ContainerProgressbar
+                  learned={item.learned}
+                  className="container__progressbar"
+                >
+                  <div className="progressbar">{item.learned}%</div>
+                </ContainerProgressbar>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </ContainerSkill>
+  );
+}
+
+const P = styled.p`
+  color: #333;
+  font-size: 1em;
+`;
+
+const ContainerSkill = styled.div`
+  i {
+    color: green;
+  }
+  .detail__skills {
+    .skill {
+      box-shadow: 5px 5px 20px 2px #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      padding-top: 10px;
+      line-height: 30px;
+    }
+  }
+  .language {
+    padding-top: 20px;
+  }
+`;
+
+const ContainerProgressbar = styled.div`
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #ccc;
+  .progressbar {
+    width: ${(props) => props.learned}%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #0d6efd;
+    transition: width 0.6s ease;
+  }
+`;

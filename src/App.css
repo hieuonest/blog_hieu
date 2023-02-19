@@ -1,0 +1,20 @@
+#blog {
+  width: 100vw;
+  height: 100vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+#blog li {
+  list-style: none;
+}
+
+#blog h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Raleway", sans-serif;
+}
