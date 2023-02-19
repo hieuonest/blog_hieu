@@ -28,7 +28,7 @@ export default function SrcCodeBlog() {
       </div>
       <button
         style={{
-          marginTop: "1000px",
+          marginTop: "100px",
           zIndex: "999",
           color: "red",
           textAlign: "center",
