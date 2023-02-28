@@ -8,25 +8,30 @@ const dataSliderBlog = [
     srcImage:
       "https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg?auto=compress&cs=tinysrgb&w=600",
     title: "Download all images trên website sử dụng javascript",
+    slug: "download-all-img-js",
   },
   {
     id: 2,
     srcImage: "https://wallpaperaccess.com/full/279643.jpg",
-    title: "Tìm hiểu về React V18",
+    title: "Đánh giá sơ bộ về React V18",
+    slug: "learn-about-react-v18",
   },
   {
     id: 3,
     srcImage: "https://wallpaperaccess.com/full/279643.jpg",
-    title: "Cách đơn giản để SEO trong Reactjs",
+    title: "SEO trên Website sử dụng ReactJS",
+    slug: "seo-reactjs",
   },
   {
     id: 4,
     srcImage:
       "https://images.pexels.com/photos/585752/pexels-photo-585752.jpeg?auto=compress&cs=tinysrgb&w=600",
-    title: "Các cách truyền dữ liệu giữa React Components",
+    title: "Truyền dữ liệu giữa React Components",
+    slug: "data-transmission-props",
   },
 ];
-export default function SliderBlogs({ handDetailBlog = () => {} }) {
+
+export default function SliderBlogs({ handleShowModal = () => {} }) {
   var settings = {
     dots: true,
     infinite: true,
@@ -38,12 +43,15 @@ export default function SliderBlogs({ handDetailBlog = () => {} }) {
     <SliderContainer className="position-relative">
       <Slider {...settings}>
         {dataSliderBlog.map((item, index) => (
-          <div key={index} className="position-relative">
+          <div
+            key={index}
+            className="position-relative d-blog container-img-slider"
+          >
             <img
               src={item.srcImage}
               alt={`slider-img-${index}`}
               width="100%"
-              height="400px"
+              height="100%"
             />
             <div
               className="position-absolute"
@@ -52,7 +60,7 @@ export default function SliderBlogs({ handDetailBlog = () => {} }) {
               <p className="blog__title">{item.title}</p>
               <button
                 className="custom-btn btn-blog"
-                onClick={() => handDetailBlog(item.id)}
+                onClick={() => handleShowModal(item.slug)}
               >
                 Xem thêm
               </button>
@@ -65,6 +73,11 @@ export default function SliderBlogs({ handDetailBlog = () => {} }) {
 }
 
 const SliderContainer = styled.div`
+  .container-img-slider {
+    max-height: 400px;
+    display: block !important;
+    padding-bottom: 10px;
+  }
   .slick-prev {
     left: 0;
     z-index: 9;
@@ -85,12 +98,15 @@ const SliderContainer = styled.div`
       color: #243e56;
     }
   }
-  .slick-dots .slick-active {
-    border: 1px solid #243e56;
-    border-radius: 50%;
+  .slick-dots {
+    display: none !important;
   }
   .slick-dots li {
     top: 30px;
+
+    button {
+      height: 0;
+    }
   }
   .blog__title {
     padding-left: 20px;
@@ -115,7 +131,6 @@ const SliderContainer = styled.div`
     cursor: pointer;
     transition: 0.5s ease-in-out;
     position: relative;
-    display: inline-block;
     box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
       7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
     outline: none;
@@ -153,5 +168,31 @@ const SliderContainer = styled.div`
       -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
       inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
       inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+  }
+  @media (max-width: 577px) {
+    img {
+      height: 200px;
+    }
+    .blog__title {
+      font-size: 18px;
+    }
+    .custom-btn {
+      width: 100px;
+      padding: 0;
+    }
+    button {
+      display: flex !important;
+      margin: 0 auto;
+      align-items: center;
+      justify-content: center;
+    }
+    .slick-dots li {
+      top: 0;
+    }
+  }
+  @media screen and (max-width: 769px) and (min-width: 577px) {
+    img {
+      height: 230px;
+    }
   }
 `;

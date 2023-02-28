@@ -14,21 +14,25 @@ const dataWorking = [
       "https://static.topcv.vn/company_logos/psMPv0ZZb1sUc3hhsagvRqgOCH9gTQ43_1633421799____d70425d87c547f71d6df274b8a328f62.png",
     location: "Front-end Developer",
     companyName: "Monkey (early start)",
-    workingTime: "01/06/2021 - 01/03/2023",
+    workingTime: "01/06/2021 - 2023",
   },
 ];
 export default function Experience() {
   return (
-    <Working className="container pt-5">
-      <Title content={"Experience"} id="experience" />
+    <Working>
+      <Title content="Experience" id="experience" />
       <div className="row">
         {dataWorking.map((item, index) => (
-          <div key={index} className="col-6 d-flex container__working">
+          <div
+            key={index}
+            className="col-12 col-lg-6 col-md-6 col-sm-12 d-flex container__working"
+          >
             <img
               src={item.logoCompany}
               alt="logo-cong-ty"
               width="150"
-              height={index === 0 ? "50px" : "auto"}
+              className="logo-company"
+              // height={index === 0 ? "50px" : "auto"}
             />
             <ul>
               <li>{item.location}</li>
@@ -45,6 +49,7 @@ export default function Experience() {
 }
 
 const Working = styled.div`
+  padding: 3rem;
   .container__working {
     align-items: center;
   }
@@ -59,5 +64,22 @@ const Working = styled.div`
       padding-right: 5px;
       font-size: 12px;
     }
+  }
+  @media (max-width: 577px) {
+    padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    .logo-company {
+      width: 100px;
+    }
+    ul {
+      padding-left: 1rem;
+      li {
+        font-size: 13px;
+      }
+    }
+  }
+  .container__working:first-child {
+    padding-bottom: 20px;
   }
 `;

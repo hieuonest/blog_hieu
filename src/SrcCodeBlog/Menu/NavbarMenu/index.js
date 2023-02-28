@@ -26,15 +26,16 @@ const Ul = styled.ul`
   padding-left: 0;
   li {
     cursor: pointer;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .menu__item {
-    line-height: 60px;
+    display: inline-block;
+    width: 100%;
     padding-left: 2.5em;
     list-style: none;
     text-decoration: none;
     color: #ffffffb3;
-  }
-  a {
   }
   li:hover {
     color: white;

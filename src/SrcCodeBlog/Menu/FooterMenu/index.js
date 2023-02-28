@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Footer() {
+export default function FooterMenu() {
   return (
     <Div>
       <p className="container__footer">© Copyright HanHieu 2023</p>
@@ -19,7 +19,7 @@ const Div = styled.div`
   display: flex;
   .container__footer {
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     width: 70%;
   }
 `;

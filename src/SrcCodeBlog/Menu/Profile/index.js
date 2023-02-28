@@ -22,7 +22,6 @@ export default function Profile() {
           onClick={handleRouter}
         />
       </h1>
-      <div className="profile-links mt-3 text-center"></div>
     </Container>
   );
 }

@@ -1,20 +1,53 @@
+:root {
+  --yellow: #f5c32c;
+  --orange: rgb(255, 119, 7);
+  --darkBlue: #242d49;
+  --gray: #788097;
+  --blueCard: #ddf8fe;
+  --purple: rgb(238 210 255);
+  --boxShadow: 0px 19px 60px rgb(0 0 0 / 8%);
+  --orangeCard: rgba(252, 166, 31, 0.45);
+  --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+  --white: #fff;
+}
+
+li {
+  list-style: none;
+}
+
 #blog {
-  width: 100vw;
-  height: 100vh;
-  overflow: scroll;
-  overflow-x: hidden;
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   box-sizing: border-box;
 }
-#blog li {
-  list-style: none;
-}
 
-#blog h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Raleway", sans-serif;
+/* .bg-dark {
+  background-color: var(--darkBlue) !important;
+} */
+/* .bg-light {
+  background-color: var(--white) !important;
+} */
+.bg-black {
+  background-color: black;
+}
+/* .bg-white {
+  background-color: var(--white);
+} */
+.dark-mode p,
+.dark-mode span,
+.dark-mode li,
+.dark-mode h4 {
+  color: #d5dcee !important;
+}
+.dark-mode .full-name {
+  color: var(--yellow) !important;
+}
+.dark-mode #home {
+  background: linear-gradient(-45deg, #2c2c2c, #8a8f91, #414443, #030303);
+}
+.dark-mode h3 {
+  color: var(--white);
+}
+.font-italic {
+  font-style: italic;
 }

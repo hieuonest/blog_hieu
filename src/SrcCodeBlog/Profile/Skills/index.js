@@ -29,7 +29,7 @@ const knowledge = [
 ];
 export default function Skills() {
   return (
-    <ContainerSkill className="container pt-5">
+    <ContainerSkill>
       <Title content="Skills" id="skills" />
       <div>
         <P className="pb-1">
@@ -84,12 +84,14 @@ const P = styled.p`
 `;
 
 const ContainerSkill = styled.div`
+  margin: 3rem;
+  margin-bottom: 0;
   i {
     color: green;
   }
   .detail__skills {
     .skill {
-      box-shadow: 5px 5px 20px 2px #ccc;
+      box-shadow: 5px 5px 20px 2px var(--gray);
       border-radius: 10px;
       padding: 10px;
       padding-top: 10px;
@@ -98,6 +100,13 @@ const ContainerSkill = styled.div`
   }
   .language {
     padding-top: 20px;
+  }
+  @media (max-width: 577px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    .language {
+      padding-top: 15px;
+    }
   }
 `;
 

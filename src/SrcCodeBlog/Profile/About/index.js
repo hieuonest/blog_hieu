@@ -22,7 +22,7 @@ const personalInformation = [
 ];
 export default function About() {
   return (
-    <ContainerAbout className="container">
+    <ContainerAbout>
       <Title content={"About"} id="about" />
       <div>
         <p>
@@ -31,7 +31,7 @@ export default function About() {
           trí lập trình viên (Software engineer).
         </p>
         <div className="row">
-          <div className="col-lg-4 col-4">
+          <div className="col-lg-5 col-md-6 col-sm-5 col-12 pr-0 container-avatar">
             <img
               src="/img/img.jpg"
               alt="img-avatar"
@@ -39,7 +39,7 @@ export default function About() {
               className="img-avatar"
             />
           </div>
-          <div className="col-lg-8 col-8">
+          <div className="col-lg-7 col-md-6 col-sm-7 col-12 pr-0">
             <h3 className="">Front-end Developer</h3>
             <hr />
             <ul>
@@ -49,9 +49,6 @@ export default function About() {
                   :<span>{item.detail}</span>
                 </li>
               ))}
-              <li></li>
-              <li></li>
-              <li></li>
             </ul>
           </div>
         </div>
@@ -62,8 +59,12 @@ export default function About() {
 
 const ContainerAbout = styled.div`
   /* padding: 60px 0; */
-  .img-avatar {
+  margin: 3rem;
+  .img-avatar,
+  .container-avatar {
     border-radius: 8px;
+    text-align: center;
+    overflow: hidden;
   }
   h3 {
     font-size: 1.75rem;
@@ -72,7 +73,7 @@ const ContainerAbout = styled.div`
     margin: 0;
 
     li {
-      line-height: 30px;
+      line-height: 50px;
       color: #222222;
       span {
         padding-left: 10px;
@@ -82,6 +83,41 @@ const ContainerAbout = styled.div`
     i {
       padding-right: 15px;
       color: #444444;
+    }
+  }
+  @media (max-width: 560px) {
+    margin-bottom: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    overflow: hidden;
+    .img-avatar {
+      width: 100%;
+    }
+    h3 {
+      padding-top: 1rem;
+    }
+    ul {
+      padding-left: 1rem;
+      li {
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  @media screen and (max-width: 769px) and (min-width: 577px) {
+    .img-avatar {
+      width: 200px;
+    }
+    h3 {
+      font-size: 1.25rem;
+    }
+    ul {
+      li {
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+      }
     }
   }
 `;
