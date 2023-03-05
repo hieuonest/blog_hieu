@@ -23,7 +23,7 @@ export default function Resume() {
           <div className="resume__detail">
             <h3>Education</h3>
             <h4>Đại học Đông Đô</h4>
-            <p className="working-time">01/10/2017 - 01/04/2022</p>
+            <p className="working-time">10/2017 - 04/2022</p>
             <ul>
               <li>Chuyên ngành: Công nghệ thông tin</li>
               <li>Tốt nghiệp loại khá: 2.61/4</li>
@@ -35,7 +35,7 @@ export default function Resume() {
             <h3>Professional Experience</h3>
             <h4>JUST-IN-TIME SOLUTIONS</h4>
             <p className="font-italic">Thực tập sinh</p>
-            <p className="working-time">01/10/2020 - 01/04/2021</p>
+            <p className="working-time">10/2020 - 04/2021</p>
             <ul>
               <li>
                 Nghiên cứu và ứng dụng công nghệ đã học áp dụng xây các
@@ -55,7 +55,7 @@ export default function Resume() {
           <div className="resume__detail">
             <h4>Monkey - Dự án Hoc10.vn</h4>
             <p className="font-italic">Lập trình viên</p>
-            <p className="working-time">01/06/2021 - 2023</p>
+            <p className="working-time">06/2021 - 03/2023</p>
             <ul>
               <li>Phát triển tính năng và vận hành hệ thống cho dự án Hoc10</li>
               <li>
