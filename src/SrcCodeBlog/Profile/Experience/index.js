@@ -7,14 +7,14 @@ const dataWorking = [
     logoCompany: "/img/cty-jits.jpg",
     location: "Thực tập sinh",
     companyName: "JUST-IN-TIME SOLUTIONS (jits)",
-    workingTime: "01/10/2020 - 01/04/2021",
+    workingTime: "10/2020 - 04/2021",
   },
   {
     logoCompany:
       "https://static.topcv.vn/company_logos/psMPv0ZZb1sUc3hhsagvRqgOCH9gTQ43_1633421799____d70425d87c547f71d6df274b8a328f62.png",
     location: "Front-end Developer",
     companyName: "Monkey (early start)",
-    workingTime: "01/06/2021 - 2023",
+    workingTime: "06/2021 - 03/2023",
   },
 ];
 export default function Experience() {
