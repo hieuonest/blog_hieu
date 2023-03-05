@@ -3,7 +3,6 @@ import styled from "styled-components";
 
 export default function DarkMode({ mode = false, setMode = () => {} }) {
   const onToggle = () => {
-    localStorage.setItem("darkMode", !mode);
     setMode(!mode);
   };
 

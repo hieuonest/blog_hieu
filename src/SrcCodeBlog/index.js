@@ -6,7 +6,7 @@ import NavbarTablet from "./Menu/NavbarMenu/NavbarTablet";
 import ScroolTop from "./ScroolTop";
 import Footer from "./Footer";
 
-const CAREER_PART_SHOW = 25;
+const CAREER_PART_SHOW = 10;
 export default function SrcCodeBlog() {
   const refScreen = useRef(null);
   const [isHiddenMenu, setIsHiddenMenu] = useState(true);

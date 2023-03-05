@@ -8,13 +8,13 @@ import Blogs from "./Blogs";
 
 export default function index() {
   return (
-    <div>
+    <>
       <Location />
       <About />
       <Experience />
       <Skills />
       <Resume />
       <Blogs />
-    </div>
+    </>
   );
 }
