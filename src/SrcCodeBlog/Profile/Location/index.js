@@ -1,15 +1,16 @@
 import React from "react";
-import "./Location.css";
-
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import "./Location.css";
 
-const fullName = {
-  name: "HanVietHieu",
-  desc: "Hello world! I'm Front-end Developer...",
-};
+const BANNER_HEADER = [
+  { srcImg: "/img/icon-facebook.jpg", alt: "icon-face" },
+  { srcImg: "/img/crown.png", alt: "img-crown" },
+  { srcImg: "/img/img_H.png", alt: "img-fiverr" },
+  { srcImg: "/img/glassesimoji.png", alt: "img-glassesimoji" },
+  { srcImg: "/img/thumbup.png", alt: "img-thumbup" },
+];
 export default function Location() {
-  const splitFullName = fullName.name.split("");
   return (
     <ContainerHome className="overflow-hidden" id="home">
       <div className="Intro" id="Intro">
@@ -32,21 +33,11 @@ export default function Location() {
               transition={{ duration: 3.5, type: "spring" }}
               className="w-mainCircle"
             >
-              <div className="w-secCircle">
-                <img src="/img/amazon.png" alt="img-amazon" />
-              </div>
-              <div className="w-secCircle">
-                <img src="/img/crown.png" alt="img-crown" />
-              </div>
-              <div className="w-secCircle">
-                <img src="/img/fiverr.png" alt="img-fiverr" />
-              </div>
-              <div className="w-secCircle">
-                <img src="/img/glassesimoji.png" alt="img-glassesimoji" />
-              </div>
-              <div className="w-secCircle">
-                <img src="/img/thumbup.png" alt="img-thumbup" />
-              </div>
+              {BANNER_HEADER.map((item, index) => (
+                <div className="w-secCircle" key={`banner_${index}`}>
+                  <img src={item.srcImg} alt={item.alt} width="120px" />
+                </div>
+              ))}
             </motion.div>
             <div className="w-backCircle blueCircle" />
             <div className="w-backCircle yellowCircle" />

@@ -31,7 +31,7 @@ export default function Resume() {
           </div>
         </div>
         <div className="col-12 col-md-6">
-          <div>
+          <div className="resume__detail">
             <h3>Professional Experience</h3>
             <h4>JUST-IN-TIME SOLUTIONS</h4>
             <p className="font-italic">Thực tập sinh</p>
@@ -44,10 +44,15 @@ export default function Resume() {
               <li>
                 Công nghệ sử dụng chủ yếu: HTML, CSS, JAVASCRIP, REACTJS...
               </li>
-              <li>Website phát triển: https://jits.com.vn/</li>
+              <li>
+                Website phát triển:{" "}
+                <a href="https://jits.com.vn/" target="_blank">
+                  jits.com.vn/
+                </a>
+              </li>
             </ul>
           </div>
-          <div>
+          <div className="resume__detail">
             <h4>Monkey - Dự án Hoc10.vn</h4>
             <p className="font-italic">Lập trình viên</p>
             <p className="working-time">01/06/2021 - 2023</p>
@@ -80,7 +85,7 @@ export default function Resume() {
                 </ul>
               </li>
               <li>Maintain fix bug hệ thống</li>
-              <li>Làm event chao quà cho giáo viên nhân ngày 20-11</li>
+              <li>Làm event trao quà cho giáo viên nhân ngày 20-11</li>
               <li>
                 Làm game tương tác như (multiple choice, word finding, game
                 SROI...)
@@ -96,6 +101,14 @@ export default function Resume() {
                     để tạo cuộc thi cho học sinh.
                   </li>
                 </ul>
+              </li>
+              <li>
+                Website phát triển:{" "}
+                <span>
+                  <a href="https://hoc10.vn/" target="_blank">
+                    Hoc10.vn/
+                  </a>
+                </span>
               </li>
             </ul>
           </div>

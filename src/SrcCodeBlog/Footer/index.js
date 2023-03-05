@@ -1,8 +1,15 @@
-import React from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { QRCodeSVG } from "qrcode.react";
 
 export default function Footer() {
+  useEffect(() => {
+    var p = document.querySelector("p");
+    p.addEventListener("input", function () {
+      this.setAttribute("data-heading", this.innerText);
+    });
+  }, []);
+
   return (
     <ContainerFooter className="footer">
       <section>
@@ -11,7 +18,7 @@ export default function Footer() {
         <div className="ware ware-3" />
         <div className="ware ware-4" />
         <div className="contact">
-          <p>Liên Hệ cho tôi</p>
+          <p data-heading="Liên Hệ cho tôi"></p>
           <div className="qr-code">
             <QRCodeSVG
               value="https://www.facebook.com/han.hieu.980"
@@ -45,6 +52,15 @@ const ContainerFooter = styled.div`
   a {
     margin: 2rem;
     font-size: 3rem;
+    i {
+      &:hover {
+        scale: 1.5;
+        transition: 0.3s ease-in-out;
+        &::before {
+          color: var(--orange);
+        }
+      }
+    }
   }
 
   .contact {
@@ -53,7 +69,8 @@ const ContainerFooter = styled.div`
     p {
       color: var(--gray);
       font-size: 3rem;
-      padding-top: 1rem;
+      padding-top: 3rem;
+      text-align: center;
     }
 
     i {
@@ -74,7 +91,6 @@ const ContainerFooter = styled.div`
     position: relative;
     width: 100%;
     height: 500px;
-    /* background: black; */
 
     .ware {
       position: absolute;
@@ -130,6 +146,53 @@ const ContainerFooter = styled.div`
       100% {
         background-position-x: 1000px;
       }
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 14vw;
+    position: relative;
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-left: 3rem;
+
+    // This is important, we need the p to be invisible.
+    color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  p::before,
+  p::after {
+    content: attr(data-heading);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  // Clip path to slice the text.
+  p::before {
+    color: var(--darkBlue);
+    clip-path: polygon(0% 100%, 100% 100%, 100% 40%, 0 60%);
+  }
+
+  p::after {
+    color: var(--orange);
+    clip-path: polygon(0 0, 100% 0%, 100% 36%, 0 56%);
+    animation: slide 5s infinite;
+  }
+
+  // Move it.
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translate(-20px, 2%);
     }
   }
 `;

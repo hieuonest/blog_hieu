@@ -32,7 +32,6 @@ export default function Experience() {
               alt="logo-cong-ty"
               width="150"
               className="logo-company"
-              // height={index === 0 ? "50px" : "auto"}
             />
             <ul>
               <li>{item.location}</li>

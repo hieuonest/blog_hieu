@@ -21,18 +21,10 @@ li {
   box-sizing: border-box;
 }
 
-/* .bg-dark {
-  background-color: var(--darkBlue) !important;
-} */
-/* .bg-light {
-  background-color: var(--white) !important;
-} */
 .bg-black {
   background-color: black;
 }
-/* .bg-white {
-  background-color: var(--white);
-} */
+
 .dark-mode p,
 .dark-mode span,
 .dark-mode li,

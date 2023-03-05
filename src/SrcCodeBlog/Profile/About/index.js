@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { information } from "../../Data/const";
 import Title from "../components/Title";
 
 const personalInformation = [
@@ -58,7 +57,6 @@ export default function About() {
 }
 
 const ContainerAbout = styled.div`
-  /* padding: 60px 0; */
   margin: 3rem;
   .img-avatar,
   .container-avatar {
