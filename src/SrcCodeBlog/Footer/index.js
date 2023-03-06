@@ -195,4 +195,11 @@ const ContainerFooter = styled.div`
       transform: translate(-20px, 2%);
     }
   }
+
+  @media screen and (max-width: 577px) {
+    .contact p {
+      font-size: 2rem;
+      margin-left: 1rem;
+    }
+  }
 `;
