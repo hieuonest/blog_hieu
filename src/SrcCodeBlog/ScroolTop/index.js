@@ -19,16 +19,19 @@ const Scroll = styled.div`
   bottom: 15px;
   right: 15px;
   z-index: 100;
-
+  &:hover {
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+  }
   .item-goto-top {
     display: flex;
     justify-content: center;
     margin-top: 15px;
     width: 40px;
     height: 40px;
-    background: var(--orange);
+    background: var(--darkBlue);
     align-items: center;
-    border-radius: 50%;
+    border-radius: 10%;
     border: none;
   }
 
