@@ -33,7 +33,9 @@ export default function Skills() {
       <Title content="Skills" id="skills" />
       <div>
         <P className="pb-1">
-          Tôi đã có hơn 1 năm kinh nghiệm trong vị trí Web Developer
+          Tôi đã có hơn 1 năm kinh nghiệm trong vị trí Web Developer. Tôi có thể
+          làm việc với các framework như:{" "}
+          <strong>Reactjs, Nextjs, Angular, Vuejs</strong>
         </P>
         <div className="row">
           {dataSkills.map((item, index) => (
