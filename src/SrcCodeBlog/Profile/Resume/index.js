@@ -55,7 +55,7 @@ export default function Resume() {
           <div className="resume__detail">
             <h4>Monkey - Dự án Hoc10.vn</h4>
             <p className="font-italic">Lập trình viên</p>
-            <p className="working-time">06/2021 - 03/2023</p>
+            <p className="working-time">06/2021 - 01/2023</p>
             <ul>
               <li>Phát triển tính năng và vận hành hệ thống cho dự án Hoc10</li>
               <li>
@@ -110,6 +110,33 @@ export default function Resume() {
                   </a>
                 </span>
               </li>
+            </ul>
+          </div>
+          <div className="resume__detail">
+            <h4>Monkey - Dự án Tutoring</h4>
+            <p className="font-italic">Lập trình viên</p>
+            <p className="working-time">01/2023 - 03/2023</p>
+            <ul>
+              <li>Phát triển mới tính năng cho dự án Tutoring</li>
+              <li>
+                Tạo website mới giúp giáo viên giảng dạy trực tiếp trên website
+              </li>
+              <li>Làm luồng đăng ký, đăng nhập</li>
+              <li>Giáo viên có thể thêm sửa xóa học sinh trong lớp...</li>
+              <li>Website đang trong quá trình phát triển</li>
+            </ul>
+          </div>
+          <div className="resume__detail">
+            <h4>Monkey - Dự án King-Of-Bet</h4>
+            <p className="font-italic">Lập trình viên</p>
+            <p className="working-time">04/2023 - Now</p>
+            <ul>
+              <li>Tạo ra một website về bóng đá</li>
+              <li>Web có tri tiết các trận đá bóng</li>
+              <li>Người dùng có thể trọn kèo để đặt cược</li>
+              <li>Build website từ đầu (config redux thunk, axios, env...)</li>
+              <li>Cắt ghép giao diện từ Fixma</li>
+              <li>Website đang trong quá trình phát triển</li>
             </ul>
           </div>
         </div>
