@@ -518,7 +518,6 @@ export default Home
 ];
 export default function Modals({ show = {}, handleClose = () => {} }) {
   const contents = data.find((item) => item.slug === show.slug) || {};
-  console.log("contents", contents);
   return (
     <Modal
       show={show.show}

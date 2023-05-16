@@ -1,7 +1,7 @@
 .Intro {
   display: flex;
-  height: 77vh;
-  padding-top: 6rem;
+  /* height: 77vh; */
+  padding: 5rem 0;
 }
 
 /* left side styling */
@@ -90,7 +90,7 @@
   filter: blur(72px);
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .Intro {
     flex-direction: column;
     gap: 7rem;
@@ -225,7 +225,7 @@
   top: 8rem;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 768px) {
   .works {
     flex-direction: column;
     height: 55rem;

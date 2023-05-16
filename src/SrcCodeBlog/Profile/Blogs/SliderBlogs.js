@@ -51,7 +51,7 @@ export default function SliderBlogs({ handleShowModal = () => {} }) {
               src={item.srcImage}
               alt={`slider-img-${index}`}
               width="100%"
-              height="100%"
+              height="400"
             />
             <div
               className="position-absolute"
@@ -169,7 +169,7 @@ const SliderContainer = styled.div`
       inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
       inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
   }
-  @media (max-width: 577px) {
+  @media (max-width: 576px) {
     img {
       height: 200px;
     }
@@ -190,7 +190,7 @@ const SliderContainer = styled.div`
       top: 0;
     }
   }
-  @media screen and (max-width: 769px) and (min-width: 577px) {
+  @media screen and (max-width: 768px) and (min-width: 576px) {
     img {
       height: 230px;
     }

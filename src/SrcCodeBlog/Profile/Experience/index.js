@@ -13,8 +13,14 @@ const dataWorking = [
     logoCompany:
       "https://static.topcv.vn/company_logos/psMPv0ZZb1sUc3hhsagvRqgOCH9gTQ43_1633421799____d70425d87c547f71d6df274b8a328f62.png",
     location: "Front-end Developer",
-    companyName: "Monkey (early start)",
+    companyName: "Early Start ( Monkey )",
     workingTime: "06/2021 - 03/2023",
+  },
+  {
+    logoCompany: "/img/logo-arabica.svg",
+    location: "Web Developer",
+    companyName: "Arabica Tech",
+    workingTime: "04/2023 - Now",
   },
 ];
 export default function Experience() {
@@ -25,21 +31,23 @@ export default function Experience() {
         {dataWorking.map((item, index) => (
           <div
             key={index}
-            className="col-12 col-lg-6 col-md-6 col-sm-12 d-flex container__working"
+            className="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-4 d-flex container__working"
           >
-            <img
-              src={item.logoCompany}
-              alt="logo-cong-ty"
-              width="150"
-              className="logo-company"
-            />
-            <ul>
-              <li>{item.location}</li>
-              <li>
-                <strong>{item.companyName}</strong>
-              </li>
-              <li className="working-time">{item.workingTime}</li>
-            </ul>
+            <div className="container__working-detail">
+              <img
+                src={item.logoCompany}
+                alt="logo-cong-ty"
+                width="150"
+                className="logo-company"
+              />
+              <ul>
+                <li>{item.location}</li>
+                <li className="company-name">
+                  <strong>{item.companyName}</strong>
+                </li>
+                <li className="working-time">{item.workingTime}</li>
+              </ul>
+            </div>
           </div>
         ))}
       </div>
@@ -49,25 +57,75 @@ export default function Experience() {
 
 const Working = styled.div`
   padding: 3rem;
-  .container__working {
+  .container__working,
+  .container__working-detail {
     align-items: center;
   }
+
+  .container__working-detail {
+    display: flex;
+  }
+
   ul {
     line-height: 30px;
     margin-bottom: 0;
+    li {
+      line-height: 1;
+    }
+
+    .company-name {
+      padding: 12px 0;
+    }
+
     .working-time {
-      background-color: #9e9ef1;
+      background-color: rgb(102 102 195);
       font-style: italic;
       width: max-content;
-      padding-left: 5px;
-      padding-right: 5px;
       font-size: 12px;
+      border-radius: 8px;
+      color: white;
+      padding: 8px 12px;
     }
   }
-  @media (max-width: 577px) {
+
+  @media (max-width: 1600px) {
+    .container__working-detail {
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+      border-radius: 10px;
+      padding: 10px;
+      padding-top: 10px;
+      line-height: 30px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .row .container__working:last-child {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    padding: 1rem;
+    .row .container__working:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 576px) {
     padding-bottom: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    .container__working-detail {
+      div,
+      li {
+        font-size: 13px;
+      }
+    }
+
+    .row .container__working:not(:first-child) {
+      margin-top: 20px;
+    }
     .logo-company {
       width: 100px;
     }
@@ -78,7 +136,7 @@ const Working = styled.div`
       }
     }
   }
-  .container__working:first-child {
+  /* .container__working:first-child {
     padding-bottom: 20px;
-  }
+  } */
 `;

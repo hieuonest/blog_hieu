@@ -19,8 +19,8 @@ export default function Location() {
             <span className="hello">Hy! I Am</span>
             <span className="full-name">HAN VIET HIEU</span>
             <span className="title">
-              Frontend Developer with high level of experience in web designing
-              and development, producting the Quality work
+              Web Developer with high level of experience in web designing and
+              development, producting the Quality work
             </span>
           </div>
         </div>
@@ -51,7 +51,7 @@ const ContainerHome = styled.div`
   padding: 3rem;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 300px;
   margin: auto;
   background: linear-gradient(-45deg, #ffffff, #ffff99, #e8e8e8, #23d5ab);
   background-size: 400% 400%;
@@ -89,7 +89,7 @@ const ContainerHome = styled.div`
     font-size: 3rem;
   }
 
-  @media (max-width: 769px) {
+  @media (max-width: 768px) {
     padding-left: 1rem;
     padding-right: 1rem;
     padding-top: 0;
@@ -103,20 +103,21 @@ const ContainerHome = styled.div`
     .title {
       font-size: 18px;
     }
+
+    .i-right {
+      display: none;
+    }
   }
 
-  @media screen and (min-width: 577px) and (max-width: 769px) {
-    padding: 3rem;
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    padding: 1rem;
     .full-name,
     .hello {
       font-size: 3rem;
     }
-    .i-right {
-      top: -70px;
-    }
   }
 
-  @media screen and (max-width: 993px) and (min-width: 769px) {
+  @media screen and (max-width: 992px) and (min-width: 768px) {
     .i-right {
       scale: 0.8;
     }
