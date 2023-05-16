@@ -18,6 +18,11 @@ const personalInformation = [
     detail: "hanviethieu1999@gmail.com",
     icon: "fa-envelope-o",
   },
+  {
+    infor: "Position",
+    detail: "Development",
+    icon: "fa-product-hunt",
+  },
 ];
 export default function About() {
   return (
@@ -29,17 +34,17 @@ export default function About() {
           khi là những chia sẻ trong quá trình làm việc, học tập những năm ở vị
           trí lập trình viên (Software engineer).
         </p>
-        <div className="row">
-          <div className="col-lg-5 col-md-6 col-sm-5 col-12 pr-0 container-avatar">
+        <div className="container-avatar__body">
+          <div className="container-avatar">
             <img
               src="/img/img.jpg"
               alt="img-avatar"
-              width="300px"
+              height="300px"
               className="img-avatar"
             />
           </div>
-          <div className="col-lg-7 col-md-6 col-sm-7 col-12 pr-0">
-            <h3 className="">Front-end Developer</h3>
+          <div className="avatar-content">
+            <h3 className="">Hán Việt Hiếu</h3>
             <hr />
             <ul>
               {personalInformation.map((item, index) => (
@@ -61,8 +66,19 @@ const ContainerAbout = styled.div`
   .img-avatar,
   .container-avatar {
     border-radius: 8px;
-    text-align: center;
     overflow: hidden;
+  }
+
+  .avatar-content {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .container-avatar__body {
+    display: flex;
+    gap: 5%;
   }
   h3 {
     font-size: 1.75rem;

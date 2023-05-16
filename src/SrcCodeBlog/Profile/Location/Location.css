@@ -1,7 +1,7 @@
 .Intro {
   display: flex;
-  height: 77vh;
-  padding-top: 6rem;
+  /* height: 77vh; */
+  padding: 5rem 0;
 }
 
 /* left side styling */

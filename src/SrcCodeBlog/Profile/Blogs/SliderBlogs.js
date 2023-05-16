@@ -51,7 +51,7 @@ export default function SliderBlogs({ handleShowModal = () => {} }) {
               src={item.srcImage}
               alt={`slider-img-${index}`}
               width="100%"
-              height="100%"
+              height="400"
             />
             <div
               className="position-absolute"

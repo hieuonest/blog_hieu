@@ -19,8 +19,8 @@ export default function Location() {
             <span className="hello">Hy! I Am</span>
             <span className="full-name">HAN VIET HIEU</span>
             <span className="title">
-              Frontend Developer with high level of experience in web designing
-              and development, producting the Quality work
+              Web Developer with high level of experience in web designing and
+              development, producting the Quality work
             </span>
           </div>
         </div>
@@ -51,7 +51,7 @@ const ContainerHome = styled.div`
   padding: 3rem;
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  min-height: 300px;
   margin: auto;
   background: linear-gradient(-45deg, #ffffff, #ffff99, #e8e8e8, #23d5ab);
   background-size: 400% 400%;

@@ -6,12 +6,25 @@ const dataSkills = [
   {
     img: "fa fa-object-group",
     title: "Font-end",
-    knowledgeDetail: " HTML, Css, Js, Reactjs, Bootstrap,...",
+    knowledgeDetail:
+      "Javascript, Reactjs, Bootstrap, Jquery, Angular, Nextjs, Bootstrap, Antd, Material-UI, Html, Scss, Sass...",
+  },
+  {
+    img: "fa fa-object-group",
+    title: "Back-end (Basic)",
+    knowledgeDetail:
+      "Express, Nodejs ,SQL, MySql, Oracle, Redis, Sequelize, Socket",
+  },
+  {
+    img: "fa fa-object-group",
+    title: "Office Computing",
+    knowledgeDetail: "Word, Access, Powerpoint",
   },
   {
     img: "fa fa-graduation-cap",
     title: "Kiến thức khác",
-    knowledgeDetail: "SQL, Oop, java-core, php, github...",
+    knowledgeDetail:
+      "Oop, Java-core(oop), Php, Github, Gitlab, Bitbucket, React native, Figma, Photoshop,...",
   },
 ];
 
@@ -23,8 +36,8 @@ const knowledge = [
   ],
   [
     { title: "REACTJS", learned: "80" },
-    { title: "ANGULAR", learned: "50" },
-    { title: "JQUERY", learned: "60" },
+    { title: "ANGULAR", learned: "80" },
+    { title: "NEXTJS", learned: "60" },
   ],
 ];
 export default function Skills() {
@@ -33,9 +46,11 @@ export default function Skills() {
       <Title content="Skills" id="skills" />
       <div>
         <P className="pb-1">
-          Tôi đã có hơn 1 năm kinh nghiệm trong vị trí Web Developer. Tôi có thể
-          làm việc với các framework như:{" "}
-          <strong>Reactjs, Nextjs, Angular, Vuejs</strong>
+          Tôi đã có hơn 3,5 năm kinh nghiệm trong vị trí Web Developer. Tôi có
+          thể làm việc với các ngôn ngữ như như:{" "}
+          <strong>
+            Reactjs, Nextjs, Angular, Vuejs, Jquery, Express, Mysql...
+          </strong>
         </P>
         <div className="row">
           {dataSkills.map((item, index) => (
@@ -92,17 +107,20 @@ const ContainerSkill = styled.div`
     color: green;
   }
   .detail__skills {
+    height: inherit;
     .skill {
       box-shadow: 5px 5px 20px 2px var(--gray);
       border-radius: 10px;
       padding: 10px;
       padding-top: 10px;
       line-height: 30px;
+      height: 100%;
     }
   }
   .language {
     padding-top: 20px;
   }
+
   @media (max-width: 577px) {
     margin-left: 1rem;
     margin-right: 1rem;
