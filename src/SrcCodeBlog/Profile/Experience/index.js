@@ -66,6 +66,12 @@ const Working = styled.div`
     display: flex;
   }
 
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    .row .container__working:last-child {
+      margin-top: 20px;
+    }
+  }
+
   ul {
     line-height: 30px;
     margin-bottom: 0;
