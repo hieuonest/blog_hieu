@@ -10,7 +10,7 @@ export default function Resume() {
         <div className="col-12 col-md-6">
           <div className="resume__detail">
             <h3>Sumary</h3>
-            <h4>Hán Việt Hiếu</h4>
+            <h4>Han Viet Hieu</h4>
             <p>
               '* Mọi sự cố gắng đều được đền đáp sứng đáng. Cố gắng chưa chắc đã
               thành công nhưng không cố gắng chắc chắn sẽ thất bại.'
@@ -85,7 +85,7 @@ export default function Resume() {
                 Được làm quen với văn hóa, môi trường công ty chuyên nghiệp.
                 Tiếp cận và học nghiệp vụ cho hệ thống ngân hàng.
               </li>
-              <li>
+              <li className="project-title">
                 Công nghệ sử dụng chủ yếu: HTML, CSS, JAVASCRIP, REACTJS,
                 Web-form...
               </li>
@@ -209,7 +209,7 @@ export default function Resume() {
               <li>Cắt ghép giao diện từ Figma</li>
               <li>Website đang trong quá trình phát triển</li>
               <li>Hỗ trợ phân tích + code Back end</li>
-              <div>
+              <div className="project-title">
                 => Công nghệ sử dụng chủ yếu: <strong>Reactjs + Express</strong>
               </div>
             </ul>
@@ -220,7 +220,9 @@ export default function Resume() {
               <li>Tạo kèo, lập phòng cho người chơi</li>
               <li>Quản lý người chơi khi có dấu hiệu gian lận</li>
               <li>Cùng Back end phân tích và thiết kế cơ sở dữ liệu</li>
-              <div>=> Công nghệ sử dụng chủ yếu: Angularjs + Express</div>
+              <div className="project-title">
+                => Công nghệ sử dụng chủ yếu: Angularjs + Express
+              </div>
             </ul>
           </div>
 
@@ -361,7 +363,10 @@ const ContainerResume = styled.div`
     padding-right: 5px;
     font-size: 12px;
   }
-  @media (max-width: 577px) {
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    margin: 1rem;
+  }
+  @media (max-width: 576px) {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-bottom: 0;

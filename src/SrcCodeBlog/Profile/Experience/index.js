@@ -33,19 +33,21 @@ export default function Experience() {
             key={index}
             className="col-12 col-lg-6 col-md-6 col-sm-12 col-xl-4 d-flex container__working"
           >
-            <img
-              src={item.logoCompany}
-              alt="logo-cong-ty"
-              width="150"
-              className="logo-company"
-            />
-            <ul>
-              <li>{item.location}</li>
-              <li className="company-name">
-                <strong>{item.companyName}</strong>
-              </li>
-              <li className="working-time">{item.workingTime}</li>
-            </ul>
+            <div className="container__working-detail">
+              <img
+                src={item.logoCompany}
+                alt="logo-cong-ty"
+                width="150"
+                className="logo-company"
+              />
+              <ul>
+                <li>{item.location}</li>
+                <li className="company-name">
+                  <strong>{item.companyName}</strong>
+                </li>
+                <li className="working-time">{item.workingTime}</li>
+              </ul>
+            </div>
           </div>
         ))}
       </div>
@@ -55,9 +57,15 @@ export default function Experience() {
 
 const Working = styled.div`
   padding: 3rem;
-  .container__working {
+  .container__working,
+  .container__working-detail {
     align-items: center;
   }
+
+  .container__working-detail {
+    display: flex;
+  }
+
   ul {
     line-height: 30px;
     margin-bottom: 0;
@@ -79,10 +87,45 @@ const Working = styled.div`
       padding: 8px 12px;
     }
   }
-  @media (max-width: 577px) {
+
+  @media (max-width: 1600px) {
+    .container__working-detail {
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
+      border-radius: 10px;
+      padding: 10px;
+      padding-top: 10px;
+      line-height: 30px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .row .container__working:last-child {
+      margin-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    padding: 1rem;
+    .row .container__working:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 576px) {
     padding-bottom: 0;
     padding-left: 1rem;
     padding-right: 1rem;
+    .container__working-detail {
+      div,
+      li {
+        font-size: 13px;
+      }
+    }
+
+    .row .container__working:not(:first-child) {
+      margin-top: 20px;
+    }
     .logo-company {
       width: 100px;
     }

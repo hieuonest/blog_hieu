@@ -10,7 +10,7 @@ const CAREER_PART_SHOW = 10;
 export default function SrcCodeBlog() {
   const refScreen = useRef(null);
   const [isHiddenMenu, setIsHiddenMenu] = useState(true);
-  const [mode, setMode] = useState(false);
+  const [mode, setMode] = useState(localStorage.getItem("modeColor") || false);
 
   const handleScroll = () => {
     const distanceAbove = document.documentElement?.scrollTop;

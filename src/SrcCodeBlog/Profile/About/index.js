@@ -44,7 +44,7 @@ export default function About() {
             />
           </div>
           <div className="avatar-content">
-            <h3 className="">Hán Việt Hiếu</h3>
+            <h3 className="">Han Viet Hieu</h3>
             <hr />
             <ul>
               {personalInformation.map((item, index) => (
@@ -118,8 +118,25 @@ const ContainerAbout = styled.div`
         align-items: center;
       }
     }
+
+    .container-avatar__body {
+      gap: 10px;
+      display: grid;
+      grid-template-columns: calc(40% - 10px) 60%;
+
+      .avatar-content {
+        ul {
+          padding-left: 0;
+
+          li {
+            font-size: 13px;
+          }
+        }
+      }
+    }
   }
-  @media screen and (max-width: 769px) and (min-width: 577px) {
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    margin: 1rem;
     .img-avatar {
       width: 200px;
     }

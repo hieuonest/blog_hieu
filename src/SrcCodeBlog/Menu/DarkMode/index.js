@@ -4,6 +4,7 @@ import styled from "styled-components";
 export default function DarkMode({ mode = false, setMode = () => {} }) {
   const onToggle = () => {
     setMode(!mode);
+    localStorage.setItem("modeColor", !mode);
   };
 
   return (
@@ -61,6 +62,10 @@ const Div = styled.div`
     background-color: #333;
   }
   .toggle-switch input[type="checkbox"]:checked + .switch {
-    background-color: #2bc6ff;
+    background-color: black;
+    &::before {
+      transform: translateX(25px);
+      background-color: white;
+    }
   }
 `;

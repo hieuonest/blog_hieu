@@ -55,7 +55,7 @@ export default function Skills() {
         <div className="row">
           {dataSkills.map((item, index) => (
             <div
-              className="col-6 col-md-3 col-lg-3 col-xl-3 detail__skills"
+              className="col-6 col-md-6 col-lg-6 col-xl-3 detail__skills"
               key={index}
             >
               <div className="skill">
@@ -106,10 +106,16 @@ const ContainerSkill = styled.div`
   i {
     color: green;
   }
+
+  .knowledge {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
   .detail__skills {
     height: inherit;
     .skill {
-      box-shadow: 5px 5px 20px 2px var(--gray);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px;
       border-radius: 10px;
       padding: 10px;
       padding-top: 10px;
@@ -121,11 +127,31 @@ const ContainerSkill = styled.div`
     padding-top: 20px;
   }
 
-  @media (max-width: 577px) {
+  @media (max-width: 992px) {
+    .detail__skills {
+      margin: 10px 0;
+    }
+
+    .row .detail__skills:nth-child(1),
+    .row .detail__skills:nth-child(2) {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    margin: 1rem;
+  }
+
+  @media (max-width: 576px) {
     margin-left: 1rem;
     margin-right: 1rem;
     .language {
       padding-top: 15px;
+      margin-bottom: 0px;
+    }
+
+    .knowledge {
+      font-size: 13px;
     }
   }
 `;

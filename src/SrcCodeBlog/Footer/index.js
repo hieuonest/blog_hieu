@@ -196,10 +196,13 @@ const ContainerFooter = styled.div`
     }
   }
 
-  @media screen and (max-width: 577px) {
-    .contact p {
-      font-size: 2rem;
-      margin-left: 1rem;
+  @media screen and (max-width: 576px) {
+    .contact {
+      display: none;
+    }
+
+    section {
+      height: 0px;
     }
   }
 `;

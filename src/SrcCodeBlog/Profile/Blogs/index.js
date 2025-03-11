@@ -34,14 +34,15 @@ const ContainerBlogs = styled.div`
     background: "#ccc";
     height: 400px;
   }
-  @media (max-width: 577px) {
+  @media (max-width: 576px) {
     margin-left: 1rem;
     margin-right: 1rem;
     .container-slider {
       height: auto;
     }
   }
-  @media screen and (max-width: 769px) and (min-width: 577px) {
+  @media screen and (max-width: 768px) and (min-width: 576px) {
+    margin: 1rem;
     .container-slider {
       height: auto;
     }

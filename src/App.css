@@ -28,7 +28,7 @@ li {
 .dark-mode p,
 .dark-mode span,
 .dark-mode li,
-.dark-mode h4 {
+.dark-mode h4, .dark-mode i, .dark-mode .project-title {
   color: #d5dcee !important;
 }
 .dark-mode .full-name {
@@ -42,4 +42,22 @@ li {
 }
 .font-italic {
   font-style: italic;
+}
+
+.dark-mode .title-blog{
+  color: #78a9ed !important;
+}
+
+.dark-mode hr{
+  color: white !important;
+}
+
+.dark-mode .container__working-detail {
+  box-shadow: rgba(240, 238, 238, 0.4) 0px 0px 10px !important;
+}
+
+@media (max-width: 576px){
+  strong, div, span, li{
+    font-size: 13px;
+  }
 }
