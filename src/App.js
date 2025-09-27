@@ -5,10 +5,14 @@ import "slick-carousel/slick/slick-theme.css";
 import SrcCodeBlog from "./SrcCodeBlog";
 
 function App() {
+  console.log("nani");
+  
   return (
-    <div id="blog">
-      <SrcCodeBlog />
-    </div>
+    <>
+      <div id="blog">
+        <SrcCodeBlog />
+      </div>
+    </>
   );
 }
 
